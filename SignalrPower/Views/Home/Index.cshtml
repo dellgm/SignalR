@@ -1,16 +1,50 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@page
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="group">Example select</label>
+                <select class="form-control" id="group">
+                    <option>All</option>
+                    <option>Caller</option>
+                    <option>PrivateGroup</option>
+
+                </select>
+            </div>
+
+
+            <div class="form-group">
+                <label for="inputPassword2" class="sr-only">Password</label>
+                <input type="text" class="form-control" id="messageInput" placeholder="Type message">
+            </div>
+            <button type="submit" id="sendButton" class="btn btn-primary mb-2">Send</button>
+            <button type="submit" id="joinGroup" class="btn btn-primary mb-2">Send</button>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-12">
+            <ul id="messagesList"></ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                    </tr>
+                </thead>
+                <tbody id="tb"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
 <script src="signalr.js"></script>
 <script src="app.js"></script>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-        </tr>
-    </thead>
-    <tbody id="tb"></tbody>
-</table>
+<script src="message.js"></script>

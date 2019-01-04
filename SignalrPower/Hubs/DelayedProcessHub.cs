@@ -9,11 +9,6 @@ using System.Threading.Tasks;
 
 namespace SignalrPower.Hubs
 {
-    public interface IClient
-    {
-        Task NewMessage(string message);
-    }
-
 
     public class DelayedProcessHub : Hub
     {

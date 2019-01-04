@@ -50,7 +50,11 @@ namespace SignalrPower
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-            app.UseSignalR(configure => { configure.MapHub<DelayedProcessHub>("/delayed"); });
+            app.UseSignalR(configure =>
+            {
+                configure.MapHub<DelayedProcessHub>("/delayed");
+                configure.MapHub<MessageHub>("/messages");
+            });
 
             app.UseMvc(routes =>
             {
